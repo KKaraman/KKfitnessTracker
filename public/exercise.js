@@ -106,7 +106,7 @@ async function handleFormSubmit(event) {
     workoutData.distance = Number(distanceInput.value.trim());
     workoutData.duration = Number(durationInput.value.trim());
     // Kerem added
-    await API.addCardioExercise(workoutData);
+    // await API.addCardioExercise(workoutData);
   } else if (workoutType === "resistance") {
     workoutData.type = "resistance";
     workoutData.name = nameInput.value.trim();
@@ -115,10 +115,10 @@ async function handleFormSubmit(event) {
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
     // Kerem added
-    await API.addResistanceExercise(workoutData);
+    // await API.addResistanceExercise(workoutData);
   }
   //Kerem commented out
-  //await API.addExercise(workoutData);
+  await API.addExercise(workoutData);
   clearInputs();
   toast.classList.add("success");
 }
