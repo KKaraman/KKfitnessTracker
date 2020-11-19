@@ -2,7 +2,11 @@
 
 ![deployedScreenshot](https://user-images.githubusercontent.com/68077734/99605394-35a56b80-29cd-11eb-8401-51e73b671871.png)
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+For this assignment, I created a workout tracker that meets all the requirements listed in this document. I was already provided with the front end code in the `Develop` folder but removed and organized all the the files in the MVC format and deleted the develop folder. This assignment required me to create Mongo database with a Mongoose schema and handle routes with Express.
+
+At first I tried to approach the app from a different perspective.  I created separate Cardio and Resistance Models and had a Workout model that included those models.  I modified the front end code slightly to call two different api-routes to create a collection in the database.  For workout to display them, I planned to populate it in the API route call for displaying workouts.  After I opened the seed file and seeing that my approach would not work with these inputs, so I created a single workout model that paralleled the seed file for the app and everything works as desired now.  
+
+Let's take a look at the requirements for the project. 
 
 ## User Story
 
@@ -13,9 +17,9 @@ For this assignment, you'll create a workout tracker. You have already been prov
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
 
-## Acceptance Criteria
+## Acceptance Criteria and optimizations
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+When the user loads the page, they should be given the option to create a new workout or continue with their last workout.  Just in case someone saves all the workouts and does not put them in on time or out of sequence, the api call sorts the activities by date so it can even pick the latest workout from an existing seed file.  
 
 The user should be able to:
 
@@ -23,38 +27,14 @@ The user should be able to:
 
   * Add new exercises to a new workout plan.
 
-  * View the combined weight of multiple exercises on the `stats` page.
+  * View the combined weight of multiple exercises on the `stats` page.  The last 7 days are saved and passed into the function since there is only 7 days that can be displayed     on the stats page.  
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+## Questions
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+For more information please contact me using my [email](keremukaraman@gmail.com).
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+The link for the fitness tracker repo can be found [here](https://github.com/KKaraman/KKfitnessTracker).
 
-## Commit Early and Often
+The link for the kkfitnesstracker heroku app can be found [here](https://kkfitnesstracker.herokuapp.com/).
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+If you liked this, you can see my other repositories at my [GitHub profile](https://github.com/KKaraman).
