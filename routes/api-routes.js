@@ -1,5 +1,3 @@
-const router = require("express").Router();
-// const { db, populate } = require("../models/Workout.js");
 const Workout = require("../models/workout.js");
 
 module.exports = (app) => {
@@ -48,7 +46,6 @@ app.put("/api/workouts/:id",(req,res)=>{
 // this should post a workout into the database
 app.post("/api/workouts", (req,res) => {
     console.log("posting a workout to the database");
-    // Workout.create({name: req.body.name })
     Workout.create({})
     .then(dbLibrary => {
         res.json(dbLibrary);
