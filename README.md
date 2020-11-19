@@ -9,6 +9,7 @@ For this assignment, you'll create a workout tracker. You have already been prov
 ## Business Context
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
+![deployedScreenshot](https://user-images.githubusercontent.com/68077734/99605394-35a56b80-29cd-11eb-8401-51e73b671871.png)
 
 ## Acceptance Criteria
 
